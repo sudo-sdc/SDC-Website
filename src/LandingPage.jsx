@@ -117,6 +117,7 @@ const LandingPage = ({ setLoggedInUser }) => {
 
       <header id="footerColor">
         <h2>Contact us!</h2>
+        <p>&copy; 2023 SDC. All rights reserved.</p>
       </header>
     </div>
   );
