@@ -117,7 +117,6 @@ const LandingPage = ({ setLoggedInUser }) => {
 
       <header id="footerColor">
         <h2>Contact us!</h2>
-        <p>&copy; 2023 Matthew Garcia. All rights reserved.</p>
       </header>
     </div>
   );
