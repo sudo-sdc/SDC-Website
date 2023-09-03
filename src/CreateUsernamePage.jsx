@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import validator from "validator"; // Import the validator library
 import axios from "axios";
+import { addDoc, collection } from "firebase/firestore";
 import "./style.css";
+import { db } from "./firebase/firebaseConfig";
 
 const CreateUsernamePage = () => {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+  const collectionReference = collection(db, "emails")
 
   const handleInputChange = (event) => {
     setEmail(event.target.value);
@@ -22,18 +25,14 @@ const CreateUsernamePage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/register", {
-        name: email,
+      await addDoc(collectionReference, {
+        email: email
       });
-
-      if (response.data.exists) {
-        setErrorMessage(response.data.message);
-      } else {
-        navigate("/");
-      }
+      setErrorMessage("Email Registered Succesfully");
+      setTimeout(()=>navigate("/"),1000 )
     } catch (error) {
       console.error("Error registering user:", error);
-      setErrorMessage("An error occurred while registering.");
+      setErrorMessage("An error occurred while registering");
     }
   };
 
