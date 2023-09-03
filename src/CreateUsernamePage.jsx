@@ -32,7 +32,7 @@ const CreateUsernamePage = () => {
       setTimeout(()=>navigate("/"),1000 )
     } catch (error) {
       console.error("Error registering user:", error);
-      setErrorMessage("Error lil bro");
+      setErrorMessage("An error occurred while registering");
     }
   };
 

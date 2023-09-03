@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgimz5GeZdRkNZ_ZKZanIL2G5uJJdJcPQ",
-  authDomain: "sdc-website-2618f.firebaseapp.com",
-  projectId: "sdc-website-2618f",
-  storageBucket: "sdc-website-2618f.appspot.com",
-  messagingSenderId: "677482242457",
-  appId: "1:677482242457:web:2a6bf90838c08b296d3308"
+  apiKey: "AIzaSyAgmxiG8Wu8-dL-MtOrwohf2ZrGYm75s28",
+  authDomain: "sdc-website-dae9b.firebaseapp.com",
+  projectId: "sdc-website-dae9b",
+  storageBucket: "sdc-website-dae9b.appspot.com",
+  messagingSenderId: "571026022392",
+  appId: "1:571026022392:web:cdc5d028e10d642e4e000d"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
