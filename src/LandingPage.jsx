@@ -6,26 +6,31 @@ import {
   faArrowLeft,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import zard1Image from "./images/zard.jpg";
-import zard2Image from "./images/zard2.jpg";
-import zard3Image from "./images/zard3.jpg";
+import president from "./images/president.jpg";
+import vicePresident from "./images/vicePresident.jpg";
+import eventCoordinator from "./images/eventCoordinator.jpg";
 import "./style.css";
 
 const galleryData = [
   {
-    imagePath: zard1Image,
-    alt: "Image 1",
-    summary: "This is the first image in the gallery.",
+    imagePath: president,
+    alt: "President of SDC",
+    summary: "Emi Jr. Anyakpor",
+    linkedin: "https://www.linkedin.com/in/emi-jr-anyakpor-3b3478226/", // Add LinkedIn URL here
   },
+
   {
-    imagePath: zard2Image,
-    alt: "Image 2",
-    summary: "This is the second image in the gallery.",
+    imagePath: vicePresident,
+    alt: "Vice President of SDC",
+    summary: "Dami Adenugba",
+    linkedin: "https://www.linkedin.com/in/adedotdev/", // Add LinkedIn URL here
   },
+
   {
-    imagePath: zard3Image,
-    alt: "Image 3",
-    summary: "This is the third image in the gallery.",
+    imagePath: eventCoordinator,
+    alt: "Event Coordinator for SDC",
+    summary: "Victoria Miteva",
+    linkedin: "https://www.linkedin.com/in/victoria-miteva-b50b721b1/", // Add LinkedIn URL here
   },
   // Add more image objects as needed
 ];
@@ -69,7 +74,7 @@ const LandingPage = ({ setLoggedInUser }) => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. 
+          pariatur.
         </p>
       </header>
 
@@ -78,6 +83,7 @@ const LandingPage = ({ setLoggedInUser }) => {
       <section className="flex-container">
         <div className="about">
           <h2>Meet the board members</h2>
+
           <div className="gallery">
             <div className="gallery-item">
               <FontAwesomeIcon
@@ -87,11 +93,17 @@ const LandingPage = ({ setLoggedInUser }) => {
                 }`}
                 onClick={handlePrevImage}
               />
-              <img
-                src={galleryData[currentImageIndex].imagePath}
-                alt={galleryData[currentImageIndex].alt}
-                className="gallery-image"
-              />
+              <a
+                href={galleryData[currentImageIndex].linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={galleryData[currentImageIndex].imagePath}
+                  alt={galleryData[currentImageIndex].alt}
+                  className="gallery-image"
+                />
+              </a>
               <FontAwesomeIcon
                 icon={faArrowRight}
                 className={`arrow-icon right ${
