@@ -60,7 +60,7 @@ const LandingPage = ({ setLoggedInUser }) => {
   return (
     <div className="intro">
       <header>
-        <h1>Welcome to our Club!</h1>
+        <h1 className="text-4xl font-bold underline">Welcome to our Club!</h1>
         <div className="buttonContainer">
           <Link to="/createUsername" className="button">
             <FontAwesomeIcon icon={faEnvelope} />
